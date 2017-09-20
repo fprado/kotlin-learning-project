@@ -3,11 +3,11 @@ package bj1
 class Card(val value: Int, val suit: Int) {
 
     init{
-        require(value in 1..13)
-        require(suit in 1..4)
+        require(value in 1..13, {"Bad value $value"})
+        require(suit in 1..4, {"Bad suit $suit"})
 
-        check(suit in 1..4)
-        assert(suit in 1..4)
+        //check(suit in 1..4)
+        //assert(suit in 1..4)
     }
 
     val suitName: String
